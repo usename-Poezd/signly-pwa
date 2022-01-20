@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  @apply outline-none focus:outline-none;
+}
+
+a {
+  @apply block;
+}
+
+
+.btn {
+  @apply text-sm text-white font-bold inline-block rounded-lg py-2 px-3 cursor-pointer duration-200 transition bg-purple-600 hover:bg-purple-700;
+}
+
+.record {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-property: border-radius, width, height;
+}
+
+.record.active {
+  @apply w-11 h-11 rounded-lg;
+}
+
+.css-yrmx0p {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 !important;
+}
+
+.bg-black-50 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(5px)
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translateY(5px)  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
