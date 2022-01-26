@@ -114,7 +114,8 @@ const Translate: NextPage = () => {
             }).then(function() {
                 const offer = pc?.localDescription as RTCSessionDescription;
 
-                return fetch('http://localhost:80/api/v1/offer', {
+                //@ts-ignore
+                return fetch(process.env.NEXT_PUBLIC_API, {
                     body: JSON.stringify({
                         sdp: offer.sdp,
                         type: offer.type
